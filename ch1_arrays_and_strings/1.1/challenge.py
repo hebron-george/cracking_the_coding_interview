@@ -7,12 +7,14 @@ def has_all_unique_characters(string):
 	# completely unique set of characters (worst case), we'll have to go through them all anyway, 
 	# but returns false at the first instance of a duplicate character.
 
-	character_dictionary = {}
+	# Third thought: using a list instead of a dictionary to save space
+
+	character_list = []
 	for c in string: # This should have a runtime of O(n) where n = size of string
-		if c in character_dictionary:
+		if c in character_list:
 			return False
 		else:
-			character_dictionary[c] = True
+			character_list.append(c)
 
 	return True
 
