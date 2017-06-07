@@ -2,7 +2,7 @@ Problem Statement
 =================
 
 
-Palindrome Permutation: Given a string, write a function to check if it is a permutation of palindrome. A plaindrome is a word or phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. The plindrome does not need to be limited to just dictionary words. 
+Palindrome Permutation: Given a string, write a function to check if it is a permutation of a palindrome. A plaindrome is a word or phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. The plindrome does not need to be limited to just dictionary words. 
 
 
 EXAMPLE
