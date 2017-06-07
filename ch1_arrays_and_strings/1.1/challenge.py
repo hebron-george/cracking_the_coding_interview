@@ -9,13 +9,11 @@ def has_all_unique_characters(string):
 
 	# Third thought: using a list instead of a dictionary to save space
 
-	character_list = []
-	for c in string: # This should have a runtime of O(n) where n = size of string
-		if c in character_list:
-			return False
-		else:
-			character_list.append(c)
+	# Fourth thought: If we can't use additional data structures, we can get the length of the input
+	# which is a O(1) operation, and get the length of the set(input), also a O(1) operation
 
+	if len(string) > len(set(string)):
+		return False
 	return True
 
 if __name__ == "__main__":
