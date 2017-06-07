@@ -6,13 +6,10 @@ One Away: There are three types of edits that can be performed on strings: inser
 
 
 
-EXAPMLE
+EXAMPLE
 =======
 
 pale, ple	=> true
 pales, pale	=> true
 pale, bale	=> true
 pale, bake	=> false
-
-
-
