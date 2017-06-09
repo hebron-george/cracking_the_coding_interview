@@ -2,20 +2,22 @@ import collections
 
 def compress_string(s):
 	# Initial run through:
-	char_to_compare = ''
-	character_count = collections.OrderedDict() # OrderedDict remembers insertion order
-	for char in s:
-		if char not in character_count.keys():
-			character_count[char] = 1
+	char_to_compare = s[0]
+	char_count = 0
 
-		if char == char_to_compare:
-			character_count[char] += 1
-		else:
+	all_chars_and_counts = []
+	for char in s:
+		if char_to_compare != char:
+			all_chars_and_counts.append((char_to_compare, char_count))
 			char_to_compare = char
-	
+			char_count = 1
+		else:
+			char_count += 1
+	all_chars_and_counts.append((char_to_compare, char_count))
+
 	compressed_str = ''
-	for k in character_count:
-		compressed_str += k + str(character_count[k])
+	for x, y in all_chars_and_counts:
+		compressed_str += x + str(y)
 
 	if len(compressed_str) >= len(s):
 		return s
